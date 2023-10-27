@@ -1,10 +1,20 @@
-import './App.css'
+import React from 'react'
+import Navbar from './components/Navbar'
+import Header from './components/Header'
+import Itemdetails from './components/Itemdetails'
+import TableItems from './components/TableItems'
+import { Provider } from 'react-redux'
+import store from './utils/store'
 
 function App() {
   return (
     <div className="App">
-      <h1>This is the header2</h1>
-      <h1>This is the second part for github</h1>
+      <Provider store={store}>
+        <Navbar />
+        <Header />
+        <Itemdetails />
+        <TableItems />
+      </Provider>
     </div>
   )
 }
